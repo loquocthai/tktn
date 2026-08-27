@@ -359,7 +359,6 @@
       document.getElementById('lblSchool').innerText=s.schoolName; 
       document.getElementById('lblTitle').innerHTML = s.appTitle.replace(/\n/g, '<br>'); 
       document.getElementById('lblFooter').innerHTML=s.footerText; 
-      document.title=s.appTitle.replace(/\n/g, ' ').replace(/<[^>]*>?/gm, '');
     }
 
     function openLoginModal() { var myModal = new bootstrap.Modal(document.getElementById('loginModal')); myModal.show(); }
