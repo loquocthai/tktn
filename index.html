@@ -165,8 +165,6 @@
     </div>
   </div>
   
-  <div class="footer" id="lblFooter">...</div>
-
   <!-- MODALS -->
   <div class="modal fade modal-login-custom" id="loginModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static"><div class="modal-dialog modal-dialog-centered modal-sm"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">XÁC THỰC QUYỀN TRUY CẬP</h5></div><div class="modal-body text-center"><input type="password" id="txtPassword" class="form-control input-rounded" placeholder="Nhập mật khẩu..." onkeypress="if(event.keyCode==13) doLogin()"><button type="button" class="btn btn-primary btn-unlock" onclick="doLogin()"><i class="bi bi-key-fill"></i> Mở Khoá</button><span class="link-forgot" onclick="openForgotModal()">Quên mật khẩu?</span><div id="loginMsg" class="text-danger mt-2 small text-center"></div></div></div></div></div>
   <div class="modal fade" id="forgotModal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content" style="border:none; border-radius:15px; overflow:hidden;"><div class="modal-forgot-header d-flex justify-content-between align-items-center"><h5 class="mb-0 fw-bold"><i class="bi bi-lock-fill"></i> Khôi phục mật khẩu</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-forgot-body"><p class="text-muted mb-3">Nhập email đã đăng ký để nhận lại mật khẩu.</p><input type="email" id="txtForgotEmail" class="form-control input-rounded mb-3" placeholder="Email của bạn..."><button type="button" class="btn btn-send-req" onclick="sendResetRequest()"><i class="bi bi-send-fill"></i> Gửi yêu cầu</button><div id="forgotMsg" class="mt-2 small"></div></div></div></div></div>
@@ -358,7 +356,6 @@
       document.getElementById('lblDept').innerText=s.deptName; 
       document.getElementById('lblSchool').innerText=s.schoolName; 
       document.getElementById('lblTitle').innerHTML = s.appTitle.replace(/\n/g, '<br>'); 
-      document.getElementById('lblFooter').innerHTML=s.footerText; 
     }
 
     function openLoginModal() { var myModal = new bootstrap.Modal(document.getElementById('loginModal')); myModal.show(); }
